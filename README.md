@@ -6,25 +6,25 @@ A collection of my hardware and signal processing projects built using core elec
 
 ### 📦 Projects
 
-- [**5-Bit SAR ADC DAC**](./5-bit-sar-adc-dac/)  
+- [**5-Bit SAR ADC DAC**](./ADC/)  
   Built a 5-bit successive approximation ADC to convert analog voltages to digital values with moderate precision.
 
-- [**FM Transmitter**](./fm-transmitter/)  
+- [**FM Transmitter**](./FM-transmitter/)  
   Designed and implemented a low-power FM transmitter using an IC to broadcast audio over a specific frequency range.
 
-- [**Audio Amplifier**](./audio-amplifier/)  
+- [**Audio Amplifier**](./Audio-amplifier/)  
   Built an audio amplifier circuit with volume control using a potentiometer for real-time analog gain adjustment.
 
 - [**7-Segment Digital Clock**](./7-segment-digital-clock/)  
   Constructed a digital clock in `HH:MM:SS` format using D flip-flops, a BCD decoder, and an Arduino for time control and display.
 
-- [**Mobile DC Charger**](./mobile-dc-charger/)  
+- [**Mobile DC Charger**](./Mobile-dc-charger/)  
   Converted AC input to regulated DC output to successfully charge a mobile phone using rectifier circuitry.
 
-- [**Digital Noise Filter**](./digital-noise-filter/)  
+- [**Digital Noise Filter**](./Digital-noise-filter/)  
   Designed a real-time digital filter using the NLMS algorithm, achieving a 20 dB reduction in signal noise ratio.
 
-- [**Wireless Solar Mobile Charger**](./wireless-solar-mobile-charger/)  
+- [**Wireless Solar Mobile Charger**](./Wireless-solar-mobile-charger/)  
   Created a wireless charger using solar power, magnetic induction, and rectification principles to charge mobile devices without a physical connection.
 
 ---
