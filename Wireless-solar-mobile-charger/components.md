@@ -65,7 +65,7 @@ This document lists and explains the components used in the Solar Wireless Mobil
 ## 🔘 7. Capacitors
 
 | Type        | Quantity | Use                                   |
-|-------------|----------|----------------------------------------
+|-------------|----------|----------------------------------------|
 | 1000 µF     | 1        | Filtering high ripple DC              |
 | 100 µF      | 1        | Filtering secondary circuits           |
 | 4.7 nF      | 1        | LC tank circuit for oscillation        |
