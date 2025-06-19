@@ -92,13 +92,6 @@ This document lists and explains the components used in the Solar Wireless Mobil
 
 ---
 
-## 💡 10. LED
-
-- **Use**: Indicator for output or circuit power
-- **Reason**: Visual confirmation of circuit status
-
----
-
 ## 📁 Sources / Datasheets
 
 - [IRFZ44N Datasheet](https://www.vishay.com/docs/91328/91328.pdf)
