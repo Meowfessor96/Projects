@@ -32,7 +32,8 @@ This project presents the development of a solar-powered wireless mobile charger
 | Rechargeable Cells (ICR18650) | 2 |
 | Breadboard | 3 |
 
-(See [`/components.md`](#) for full specs.)
+(See [components.md](components.md) for full specs.)
+ww
 
 ---
 
@@ -42,7 +43,8 @@ This project presents the development of a solar-powered wireless mobile charger
 - ✅ **Receiver Circuit** — rectifies AC to DC and regulates to 5V
 - ✅ **Power Bank Circuit** — charges batteries for cloudy use
 
-(See schematic images in the [`/images`](#) folder.)
+(See schematic images in the [images/](images/) folder.)
+
 
 ---
 
