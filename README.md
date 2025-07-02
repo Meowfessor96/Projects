@@ -1,6 +1,6 @@
 # Personal Projects Portfolio
 
-A collection of my hardware and signal processing projects built using core electrical and electronics concepts. Each project has its own folder with source files, documentation, and related code or circuit diagrams.
+A collection of my projects built using core electrical and other concepts I have learnt. Each project has its own folder with source files, documentation, and related code or circuit diagrams.
 
 ---
 
@@ -16,7 +16,7 @@ A collection of my hardware and signal processing projects built using core elec
   Built an audio amplifier circuit with volume control using a potentiometer for real-time analog gain adjustment.
 
 - [**7-Segment Digital Clock**](./7-segment-digital-clock/)  
-  Constructed a digital clock in `HH:MM:SS` format using D flip-flops, a BCD decoder, and an Arduino for time control and display.
+  Constructed a digital clock in `H:MM:SS` format using D flip-flops, a BCD decoder, and an Arduino for time control and display.
 
 - [**Mobile DC Charger**](./Mobile-dc-charger/)  
   Converted AC input to regulated DC output to successfully charge a mobile phone using rectifier circuitry.
