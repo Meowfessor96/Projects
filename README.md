@@ -1,33 +1,43 @@
-# Personal Projects Portfolio
+# Project Portfolio
 
-A collection of my projects built using core electrical and other concepts I have learnt. Each project has its own folder with source files, documentation, and related code or circuit diagrams.
-
----
-
-### 📦 Projects
-
-- [**5-Bit SAR ADC DAC**](./Electrical_Core_projects/ADC/)  
-  Built a 5-bit successive approximation ADC to convert analog voltages to digital values with moderate precision.
-
-- [**FM Transmitter**](./Electrical_Core_projects/FM-transmitter/)  
-  Designed and implemented a low-power FM transmitter using an IC to broadcast audio over a specific frequency range.
-
-- [**Audio Amplifier**](./Electrical_Core_projects/Audio-amplifier/)  
-  Built an audio amplifier circuit with volume control using a potentiometer for real-time analog gain adjustment.
-
-- [**7-Segment Digital Clock**](./Electrical_Core_projects/7-segment-digital-clock/)  
-  Constructed a digital clock in `H:MM:SS` format using D flip-flops, a BCD decoder, and an Arduino for time control and display.
-
-- [**Mobile DC Charger**](./Electrical_Core_projects/Mobile-dc-charger/)  
-  Converted AC input to regulated DC output to successfully charge a mobile phone using rectifier circuitry.
-
-- [**Digital Noise Filter**](./Electrical_Core_projects/Digital-noise-filter/)  
-  Designed a real-time digital filter using the NLMS algorithm, achieving a 20 dB reduction in signal noise ratio.
-
-- [**Wireless Solar Mobile Charger**](./Electrical_Core_projects/Wireless-solar-mobile-charger/)  
-  Created a wireless charger using solar power, magnetic induction, and rectification principles to charge mobile devices without a physical connection.
+This repository showcases a collection of personal projects, categorized into general development and electrical engineering domains. Use the links below to navigate to each project folder.
 
 ---
 
-Each project folder includes a detailed `README.md`, circuit schematics (where applicable), and implementation notes.
+## 🚧 Upcoming Projects
+
+### 🧩 [Run Chess in Terminal (C++)](./Chess-in-terminal/)
+A C++ project to implement a fully playable chess game in the terminal environment.
+
+### 📋 [GNOME Clipboard Manager Extension](./Gnome_Clipboard_Extension/)
+A GNOME Shell extension to manage clipboard history and enable quick access features.
+
+---
+
+## 🔌 [Electrical Projects](./Electrical_Core_Projects/)
+
+### 🔧 [5-bit SAR ADC with DAC](./Electrical_Core_Projects/SAR_ADC_DAC/)  
+Analog-to-digital converter with successive approximation, featuring 5-bit precision and DAC integration.
+
+### 📡 [FM Transmitter](./Electrical_Core_Projects/FM_Transmitter/)  
+Built a basic FM transmitter using ICs for broadcasting audio on a fixed frequency.
+
+### 🔊 [Audio Amplifier](./Electrical_Core_Projects/Audio_Amplifier/)  
+Amplifier circuit with potentiometer-based gain control.
+
+### ⏱ [7-Segment Digital Clock](./Electrical_Core_Projects/Digital_Clock/)  
+HH:MM:SS format clock using flip-flops, decoders, and Arduino.
+
+### 🔋 [Mobile DC Charger](./Electrical_Core_Projects/Mobile_DC_Charger/)  
+Circuit for converting AC to DC and charging mobile devices.
+
+### 🧹 [Digital Noise Filter](./Electrical_Core_Projects/Digital_Noise_Filter/)  
+Signal noise reduction using the Normalized LMS algorithm.
+
+### ☀️ [Wireless Solar Mobile Charger](./Electrical_Core_Projects/Wireless_Solar_Charger/)  
+Solar-powered wireless mobile charging prototype with magnetic induction.
+
+---
+
+Stay tuned for more updates as new projects are added!
 
