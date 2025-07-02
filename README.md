@@ -1,6 +1,6 @@
 # Project Portfolio
 
-This repository showcases a collection of personal projects, categorized into general development and electrical engineering domains. Use the links below to navigate to each project folder.
+This repository showcases a collection of my personal projects, categorized into general development and electrical engineering domains. Use the links below to navigate to each project folder.
 
 ---
 
