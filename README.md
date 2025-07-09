@@ -2,15 +2,6 @@
 
 This repository showcases a collection of my personal projects, categorized into general development and electrical engineering domains. Use the links below to navigate to each project folder.
 
----
-
-## 🚧 Upcoming Projects
-
-### 🧩 [Run Chess in Terminal (C++)](./Chess-in-terminal/)
-A C++ project to implement a fully playable chess game in the terminal environment.
-
-### 📋 [GNOME Clipboard Manager Extension](./Gnome_Clipboard_Extension/)
-A GNOME Shell extension to manage clipboard history and enable quick access features.
 
 ---
 
