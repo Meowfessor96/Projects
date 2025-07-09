@@ -7,25 +7,25 @@ This repository showcases a collection of my personal projects, categorized into
 
 ## 🔌 [Electrical Projects](./Electrical_Core_Projects/)
 
-### 🔧 [5-bit SAR ADC with DAC](./Electrical_Core_Projects/SAR_ADC_DAC/)  
+### 🔧 [5-bit SAR ADC with DAC](./Electrical_Core_Projects/ADC/)  
 Analog-to-digital converter with successive approximation, featuring 5-bit precision and DAC integration.
 
-### 📡 [FM Transmitter](./Electrical_Core_Projects/FM_Transmitter/)  
+### 📡 [FM Transmitter](./Electrical_Core_Projects/FM-Transmitter/)  
 Built a basic FM transmitter using ICs for broadcasting audio on a fixed frequency.
 
-### 🔊 [Audio Amplifier](./Electrical_Core_Projects/Audio_Amplifier/)  
+### 🔊 [Audio Amplifier](./Electrical_Core_Projects/Audio-Amplifier/)  
 Amplifier circuit with potentiometer-based gain control.
 
-### ⏱ [7-Segment Digital Clock](./Electrical_Core_Projects/Digital_Clock/)  
+### ⏱ [7-Segment Digital Clock](./Electrical_Core_Projects/7-segment-digital-clock/)  
 HH:MM:SS format clock using flip-flops, decoders, and Arduino.
 
-### 🔋 [Mobile DC Charger](./Electrical_Core_Projects/Mobile_DC_Charger/)  
+### 🔋 [Mobile DC Charger](./Electrical_Core_Projects/Mobile-DC-charger/)  
 Circuit for converting AC to DC and charging mobile devices.
 
-### 🧹 [Digital Noise Filter](./Electrical_Core_Projects/Digital_Noise_Filter/)  
+### 🧹 [Digital Noise Filter](./Electrical_Core_Projects/Digital-Noise-Filter/)  
 Signal noise reduction using the Normalized LMS algorithm.
 
-### ☀️ [Wireless Solar Mobile Charger](./Electrical_Core_Projects/Wireless_Solar_Charger/)  
+### ☀️ [Wireless Solar Mobile Charger](./Electrical_Core_Projects/Wireless-solar-mobile-charger/)  
 Solar-powered wireless mobile charging prototype with magnetic induction.
 
 ---
