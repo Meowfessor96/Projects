@@ -13,7 +13,7 @@ Analog-to-digital converter with successive approximation, featuring 5-bit preci
 ### 📡 [FM Transmitter](./Electrical_Core_Projects/FM-Transmitter/)  
 Built a basic FM transmitter using ICs for broadcasting audio on a fixed frequency.
 
-### 🔊 [Audio Amplifier](./Electrical_Core_Projects/Audio-Amplifier/)  
+### 🔊 [Audio Amplifier](./Electrical_Core_Projects/Audio-amplifier/)  
 Amplifier circuit with potentiometer-based gain control.
 
 ### ⏱ [7-Segment Digital Clock](./Electrical_Core_Projects/7-segment-digital-clock/)  
