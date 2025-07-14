@@ -1,78 +1,93 @@
 # 5-bit SAR ADC using Arduino, BCD Encoder, and LEDs
 
-This project demonstrates a hardware-based 5-bit Successive Approximation Register (SAR) ADC implemented on a breadboard. It uses an Arduino for voltage reference/control, a custom DAC for comparison, and a **BCD encoder** to simplify the binary output logic. The resulting 5-bit digital output is visualized using 5 LEDs.
+This project demonstrates a **hardware-based 5-bit SAR (Successive Approximation Register) ADC** using an **Arduino**, a **BCD encoder**, and **LEDs** to display the digital output. It mimics how microcontrollers perform analog-to-digital conversion, but using **pure hardware logic**.
 
 ---
 
 ## 🧠 Project Overview
 
-A SAR ADC converts an analog voltage to digital by performing bit-by-bit approximation — starting from the Most Significant Bit (MSB) and narrowing down using comparator feedback. Each comparison step sets a bit in the digital output.
+A SAR ADC works by comparing an analog input voltage against a series of reference voltages, one bit at a time, starting from the **Most Significant Bit (MSB)**. For each step, the result of the comparison decides whether the bit is set to `1` or `0`.
 
-In this setup:
+In this project:
 
-- An **analog input voltage** is compared with DAC-generated values.
-- A **BCD encoder** processes logic decisions and helps output valid binary sequences.
-- The final 5-bit result is displayed on **LEDs**, with:
-  - LED ON = bit `1`
-  - LED OFF = bit `0`
+- The analog input is compared using a **custom DAC** and a comparator setup.
+- A **BCD encoder** simplifies and encodes the logic.
+- The **final 5-bit digital output** is shown using **5 LEDs**:
+  - 🔴 LED ON → Bit = `1`
+  - ⚫ LED OFF → Bit = `0`
 
 ---
 
 ## ⚙️ Hardware Components Used
 
-- 🟦 **Arduino Uno** – provides voltage reference or control for the DAC
-- 🧮 **BCD Encoder IC** – encodes comparator outputs to binary representation
-- ⚡ **Resistor Ladder / Voltage Divider** – generates analog test voltages
-- 🔘 **5 LEDs** – represent the 5-bit binary output (MSB to LSB)
-- ⚙️ **Discrete logic components and DAC circuit**
-- ⛓️ **Breadboard + Jumper wires** – for hardware prototyping
-- 🟫 **Resistors** – for voltage division and current-limiting on LEDs
+- 🟦 **Arduino Uno** – generates voltage references or controls the DAC logic
+- 🧮 **BCD Encoder IC** – converts comparator decisions into 5-bit binary output
+- 🧪 **Comparator circuit** – compares analog input to DAC output
+- 🔌 **Resistor ladder / voltage divider** – for generating analog voltages
+- 🔘 **5 LEDs** – show binary output (from MSB to LSB)
+- ⛓️ **Breadboard & jumper wires** – for prototyping
+- 🟫 **Resistors** – for current-limiting and DAC precision
 
-> 🔎 The conversion logic is purely hardware-driven — no software-based ADC is used.
+> ⚠️ No internal software ADC is used — all logic is **hardware-driven**.
 
 ---
 
 ## 🔢 LED Output and Voltage Mapping
 
-Below are the observed outputs from the demo video:
+Each 5-bit binary output represents a **digital level from 0 to 31** (`2⁵ - 1 = 31`).  
+If **2.0V** is considered the maximum input voltage, then:
 
-| Input Voltage | 5-bit Binary Output | LED Display (MSB → LSB) |
-|---------------|---------------------|--------------------------|
-| 2.0V          | `11111`             | 🔴 🔴 🔴 🔴 🔴            |
-| 1.6V          | `11000`             | 🔴 🔴 ⚫ ⚫ ⚫            |
-| 1.4V          | `10110`             | 🔴 ⚫ 🔴 🔴 ⚫            |
-| 1.2V          | `10011`             | 🔴 ⚫ ⚫ 🔴 🔴            |
+### ➕ 1 Digital Step = 2.0V / 31 ≈ **0.0645V (64.5mV)**
 
-(🔴 = LED ON, ⚫ = LED OFF)
+So, each binary output maps to a voltage level approximately as:
+
+Digital Output: N
+Voltage ≈ (N / 31) × 2.0V
+
+
+---
+
+### 📺 Sample Readings from Demo:
+
+| Input Voltage | Binary Output | Decimal Value | LED Display (MSB → LSB) | Approx Voltage from Code | Error (V) |
+|---------------|---------------|---------------|---------------------------|---------------------------|-----------|
+| 2.0V          | `11111`       | 31            | 🔴 🔴 🔴 🔴 🔴             | (31/31) × 2.0V = 2.0V     | ±0.0V     |
+| 1.6V          | `11000`       | 24            | 🔴 🔴 ⚫ ⚫ ⚫             | (24/31) × 2.0V ≈ 1.55V    | ~ -0.05V  |
+| 1.4V          | `10110`       | 22            | 🔴 ⚫ 🔴 🔴 ⚫             | (22/31) × 2.0V ≈ 1.42V    | ~ +0.02V  |
+| 1.2V          | `10011`       | 19            | 🔴 ⚫ ⚫ 🔴 🔴             | (19/31) × 2.0V ≈ 1.23V    | ~ +0.03V  |
+
+> 🧮 Small errors (~±0.05V) may appear due to resistor tolerances, comparator offsets, or DAC resolution.
 
 ---
 
 ## 🧰 How It Works
 
-1. The analog input is connected to a comparator system driven by a DAC.
-2. The Arduino likely controls DAC steps or feeds in voltage references.
-3. At each bit decision, the comparator result is sent to a **BCD encoder**.
-4. The encoder outputs binary values representing the voltage level.
-5. LEDs display the resulting 5-bit binary code.
+1. **Analog Input** is connected to a comparator system.
+2. **Arduino or DAC logic** generates reference voltages for comparison.
+3. **Comparator outputs** are fed into a **BCD encoder**, which translates them into a binary value.
+4. **5 LEDs** show the binary result visually.
+5. Final result gives an idea of where the input voltage stands between 0V and 2V.
 
 ---
 
-## 🎯 Output Interpretation
+## 🧭 Interpreting Output
 
-- Each LED corresponds to a bit: **[Bit4, Bit3, Bit2, Bit1, Bit0]**
-- As voltage increases, higher bits turn ON.
-- Maximum voltage (~2.0V) results in all LEDs ON (`11111`).
-- Lower voltages result in sparser LED patterns (e.g., `10011`).
+- LED pattern represents a 5-bit binary number.
+- Binary `11111` = Decimal `31` → Maximum voltage (2.0V)
+- Binary `00000` = Decimal `0` → Minimum voltage (0V)
+- Every step ≈ **64.5mV**
+- So, a binary value of `N` means:  
+  ➡️ **Approx Voltage = (N × 64.5mV)**
 
 ---
 
 ## 🧪 Applications & Learnings
 
-- Demonstrates hardware-level analog-to-digital conversion
-- Reinforces concepts of DACs, comparators, encoders, and digital output interpretation
-- Good educational example of SAR ADC principles without needing microcontroller computation
+- Demonstrates how SAR ADCs work at a hardware level
+- Reinforces core electronics concepts:
+  - DACs and comparators
+  - Binary encoding using BCD
+  - Digital output interpretation using LEDs
+- Great for beginner-level ADC understanding and hardware debugging
 
 ---
-
-## 📁 Recommended Repo Structure
-
