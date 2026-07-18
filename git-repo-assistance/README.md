@@ -2,6 +2,8 @@
 
 **GitHub Repo Intelligence** is an AI-powered Chrome extension designed to accelerate developer onboarding. It injects a smart, context-aware sidebar directly into GitHub repository pages, instantly analyzing codebases, file structures, and documentation to provide actionable architectural insights—saving developers hours of manual exploration.
 
+https://github.com/user-attachments/assets/c1ddf3c4-3dd5-494d-bb05-b6768979d550
+
 ## ✨ Key Features
 
 - **📝 AI-Powered TL;DR:** Generates a concise, 2-sentence summary of the repository's core purpose and problem statement using advanced LLMs.
