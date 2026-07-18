@@ -38,14 +38,14 @@ pip install -r requirements.txt
 
 #### 2.5 Alternate local way
 
-Create a `.env` file in the backend directory and add your keys /
+Create a `.env` file within the backend directory and add your keys /
 
 ```bash
 OPENAI_API_KEY=gsk_your_groq_key_here
 GITHUB_TOKEN=ghp_your_github_token_here
 ```
 
-### 3.Start the locala Flask Server
+### 3.Start the local Flask Server
 
 ```bash
 python app.py
