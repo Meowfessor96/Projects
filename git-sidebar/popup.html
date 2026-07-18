@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { width: 340px; padding: 20px; font-family: -apple-system, sans-serif; background: #0f172a; color: #e2e8f0; }
+    h3 { margin-top: 0; font-size: 16px; color: #22d3ee; display: flex; align-items: center; gap: 8px; }
+    label { font-size: 12px; font-weight: 600; display: block; margin-bottom: 6px; margin-top: 16px; color: #94a3b8; }
+    input { width: 100%; padding: 10px; background: #1e293b; border: 1px solid #334155; color: #f1f5f9; border-radius: 6px; box-sizing: border-box; font-family: monospace; font-size: 13px; }
+    input:focus { outline: none; border-color: #22d3ee; }
+    button { width: 100%; padding: 10px; background: linear-gradient(135deg, #0891b2 0%, #0d9488 100%); color: white; border: none; cursor: pointer; border-radius: 6px; font-weight: 600; margin-top: 20px; transition: opacity 0.2s; }
+    button:hover { opacity: 0.9; }
+    .status { font-size: 12px; color: #34d399; margin-top: 12px; text-align: center; }
+    .hint { font-size: 11px; color: #64748b; margin-top: 4px; }
+    .hint a { color: #22d3ee; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <h3>⚙️ Extension Settings</h3>
+  
+  <label>Groq API Key (Free & Fast AI)</label>
+  <input type="password" id="groq_key" placeholder="gsk_...">
+  <div class="hint">Get a free key at <a href="https://console.groq.com/keys" target="_blank">console.groq.com</a></div>
+  
+  <label>GitHub Token (Optional, prevents rate limits)</label>
+  <input type="password" id="gh_token" placeholder="ghp_...">
+  <div class="hint">Generate at GitHub Settings > Developer Settings</div>
+
+  <button id="save">Save Configuration</button>
+  <div id="status" class="status"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
