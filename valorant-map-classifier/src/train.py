@@ -221,12 +221,11 @@ def train():
             best_val_acc = val_acc
             patience_counter = 0
             torch.save({
-                'epoch': epoch + 1,
                 'model_state_dict': model.state_dict(),
-                'optimizer_state_dict': optimizer.state_dict(),
                 'val_acc': val_acc,
+                'epoch': epoch + 1,
                 'maps': MAPS
-            }, BEST_MODEL_PATH)
+                }, BEST_MODEL_PATH)
             print(f"  💾 Saved best model (val_acc: {val_acc:.2f}%)")
         else:
             patience_counter += 1

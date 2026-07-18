@@ -3,6 +3,17 @@
 This repository showcases a collection of my personal projects, categorized into general development and electrical engineering domains. Use the links below to navigate to each project folder.
 
 
+## Projects :
+
+### [Binary Classification using Logistic Regression](./Binary-Classification-Using-Logistic-Regression)
+Implemented a binary classifier from scratch using Logistic Regression with model training and evaluation.
+
+### [KNN Image Classifier](./KNN-Classifier/)
+Implemented a K-Nearest Neighbors classifier for numerical image recognition and achieved successful predictions on benchmark datasets.
+
+### [Valorant image processing](./valorant-map-classifier/)
+Developed an image classification model to identify Valorant maps, achieving 83%+ accuracy despite training on a relatively small dataset.
+
 ---
 
 ## 🔌 [Electrical Projects](./Electrical_Core_Projects/)
@@ -29,6 +40,3 @@ Signal noise reduction using the Normalized LMS algorithm.
 Solar-powered wireless mobile charging prototype with magnetic induction.
 
 ---
-
-Stay tuned for more updates as new projects are added!
-
