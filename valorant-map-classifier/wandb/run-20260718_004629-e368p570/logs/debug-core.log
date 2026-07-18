@@ -1,0 +1,22 @@
+{"time":"2026-07-18T00:46:26.3067503+05:30","level":"INFO","msg":"main: starting server","port-filename":"C:\\Users\\midor\\AppData\\Local\\Temp\\tmpaqtx3x7j\\port-27796.txt","pid":27796,"detached":false,"idle-timeout":600000000000,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2026-07-18T00:46:26.3107508+05:30","level":"INFO","msg":"server: will exit if parent process dies","ppid":27796}
+{"time":"2026-07-18T00:46:26.3107508+05:30","level":"INFO","msg":"server: accepting connections","addr":{"Name":"C:\\Users\\midor\\AppData\\Local\\Temp\\wandb-27796-15844-35183086\\socket","Net":"unix"}}
+{"time":"2026-07-18T00:46:26.3107508+05:30","level":"INFO","msg":"server: accepting connections","addr":{"IP":"127.0.0.1","Port":53700,"Zone":""}}
+{"time":"2026-07-18T00:46:28.425596+05:30","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"1(127.0.0.1:53702)"}
+{"time":"2026-07-18T00:46:29.1821488+05:30","level":"INFO","msg":"handleInformInit: received","streamId":"e368p570","id":"1(127.0.0.1:53702)"}
+{"time":"2026-07-18T00:46:29.7089126+05:30","level":"INFO","msg":"handleInformInit: stream started","streamId":"e368p570","id":"1(127.0.0.1:53702)"}
+{"time":"2026-07-18T00:46:35.9162471+05:30","level":"INFO","msg":"connection: cancelling request","id":"1(127.0.0.1:53702)","requestId":"rcmgnxsk9hr8"}
+{"time":"2026-07-18T01:01:05.0806812+05:30","level":"INFO","msg":"connection: cancelling request","id":"1(127.0.0.1:53702)","requestId":"rcmgnxsk9hr8"}
+{"time":"2026-07-18T01:01:10.2219431+05:30","level":"INFO","msg":"connection: cancelling request","id":"1(127.0.0.1:53702)","requestId":"rcmgnxsk9hr8"}
+{"time":"2026-07-18T01:01:10.2255423+05:30","level":"INFO","msg":"handleInformFinish: finish message received","streamId":"e368p570","id":"1(127.0.0.1:53702)"}
+{"time":"2026-07-18T01:01:10.2265813+05:30","level":"INFO","msg":"handleInformFinish: stream closed","streamId":"e368p570","id":"1(127.0.0.1:53702)"}
+{"time":"2026-07-18T01:01:10.2281105+05:30","level":"INFO","msg":"handleInformTeardown: server teardown initiated","id":"1(127.0.0.1:53702)"}
+{"time":"2026-07-18T01:01:10.2281105+05:30","level":"INFO","msg":"handleInformTeardown: server shutdown complete","id":"1(127.0.0.1:53702)"}
+{"time":"2026-07-18T01:01:10.2281105+05:30","level":"INFO","msg":"server: is shutting down"}
+{"time":"2026-07-18T01:01:10.2281105+05:30","level":"INFO","msg":"connection: closing","id":"1(127.0.0.1:53702)"}
+{"time":"2026-07-18T01:01:10.2281105+05:30","level":"INFO","msg":"processOutgoingData: finished","id":"1(127.0.0.1:53702)"}
+{"time":"2026-07-18T01:01:10.2281105+05:30","level":"INFO","msg":"connection: closed successfully","id":"1(127.0.0.1:53702)"}
+{"time":"2026-07-18T01:01:10.2281105+05:30","level":"INFO","msg":"connection: ManageConnectionData: connection closed","id":"1(127.0.0.1:53702)"}
+{"time":"2026-07-18T01:01:10.2281105+05:30","level":"INFO","msg":"server: listener closed","addr":{"Name":"C:\\Users\\midor\\AppData\\Local\\Temp\\wandb-27796-15844-35183086\\socket","Net":"unix"}}
+{"time":"2026-07-18T01:01:10.2281105+05:30","level":"INFO","msg":"server: listener closed","addr":{"IP":"127.0.0.1","Port":53700,"Zone":""}}
+{"time":"2026-07-18T01:01:10.2281105+05:30","level":"INFO","msg":"server: all connections closed"}

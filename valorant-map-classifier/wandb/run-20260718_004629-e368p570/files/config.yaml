@@ -1,0 +1,66 @@
+_wandb:
+    value:
+        cli_version: 0.28.1
+        e:
+            n66x7rp1d8shbkb8vlynqlbpubnx196w:
+                cpu_count: 6
+                cpu_count_logical: 12
+                cudaVersion: "13.3"
+                disk:
+                    /:
+                        total: "510339403776"
+                        used: "391538311168"
+                email: midoriya17deku@gmail.com
+                executable: C:\Program Files\Python312\python.exe
+                gpu: NVIDIA GeForce RTX 3050 Laptop GPU
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ampere
+                      cudaCores: 2048
+                      memoryTotal: "4294967296"
+                      name: NVIDIA GeForce RTX 3050 Laptop GPU
+                      uuid: GPU-fba0811a-2cf0-d009-cbca-61d5288eba3d
+                host: Meowfessor
+                memory:
+                    total: "16539545600"
+                os: Windows-11-10.0.26200-SP0
+                program: -m src.train
+                python: CPython 3.12.0
+                root: C:\Users\midor\OneDrive\Desktop\valorant-map-classifier
+                startedAt: "2026-07-17T19:16:29.174674Z"
+                writerId: n66x7rp1d8shbkb8vlynqlbpubnx196w
+        m: []
+        python_version: 3.12.0
+        t:
+            "1":
+                - 1
+                - 41
+                - 80
+            "2":
+                - 1
+                - 41
+                - 80
+            "3":
+                - 1
+                - 2
+                - 16
+            "4": 3.12.0
+            "5": 0.28.1
+            "8":
+                - 3
+            "12": 0.28.1
+            "13": windows-amd64
+batch_size:
+    value: 8
+epochs:
+    value: 30
+image_size:
+    value: 224
+lr:
+    value: 0.0001
+model:
+    value: efficientnet_b0
+num_maps:
+    value: 10
+weight_decay:
+    value: 0.0001

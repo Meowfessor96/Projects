@@ -1,0 +1,34 @@
+{
+  "os": "Windows-11-10.0.26200-SP0",
+  "python": "CPython 3.12.0",
+  "startedAt": "2026-07-17T19:16:29.174674Z",
+  "program": "-m src.train",
+  "email": "midoriya17deku@gmail.com",
+  "root": "C:\\Users\\midor\\OneDrive\\Desktop\\valorant-map-classifier",
+  "host": "Meowfessor",
+  "executable": "C:\\Program Files\\Python312\\python.exe",
+  "cpu_count": 6,
+  "cpu_count_logical": 12,
+  "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "510339403776",
+      "used": "391538311168"
+    }
+  },
+  "memory": {
+    "total": "16539545600"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+      "memoryTotal": "4294967296",
+      "cudaCores": 2048,
+      "architecture": "Ampere",
+      "uuid": "GPU-fba0811a-2cf0-d009-cbca-61d5288eba3d"
+    }
+  ],
+  "cudaVersion": "13.3",
+  "writerId": "n66x7rp1d8shbkb8vlynqlbpubnx196w"
+}

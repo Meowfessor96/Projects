@@ -1,0 +1,36 @@
+Training:   0%|            | 0/22 [00:00<?, ?it/s]C:\Users\midor\AppData\Roaming\Python\Python312\site-packages\torch\utils\data\dataloader.py:1102: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+                                                             
+
+Epoch 1/30 (78.3s)
+  Train Loss: 2.3211 | Train Acc: 10.86%
+  Val   Loss: 2.2223 | Val   Acc: 15.71%
+  Per-class accuracy:
+    ASCENT    :  14.3%
+    BIND      :  14.3%
+    BREEZE    :  14.3%
+    FRACTURE  :  14.3%
+    HAVEN     :  14.3%
+    ICEBOX    :   0.0%
+    LOTUS     :  28.6%
+    PEARL     :  28.6%
+    SPLIT     :   0.0%
+    SUNSET    :  28.6%
+  💾 Saved best model (val_acc: 15.71%)
+
+Epoch 2/30 (73.1s)
+  Train Loss: 2.2403 | Train Acc: 18.29%
+  Val   Loss: 2.1263 | Val   Acc: 32.86%
+  Per-class accuracy:
+    ASCENT    :  42.9%
+    BIND      :  42.9%
+    BREEZE    :  28.6%
+    FRACTURE  :  42.9%
+    HAVEN     :  42.9%
+    ICEBOX    :  14.3%
+    LOTUS     :  71.4%
+    PEARL     :  14.3%
+    SPLIT     :   0.0%
+    SUNSET    :  28.6%
+  💾 Saved best model (val_acc: 32.86%)
+  super().__init__(loader)

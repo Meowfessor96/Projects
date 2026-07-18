@@ -1,0 +1,326 @@
+                                                                             
+
+Epoch 1/30 (45.6s)
+  Train Loss: 2.3044 | Train Acc: 12.57%
+  Val   Loss: 2.2567 | Val   Acc: 20.00%
+  Per-class accuracy:
+    ASCENT    :   0.0%
+    BIND      :  28.6%
+    BREEZE    :  14.3%
+    FRACTURE  :  28.6%
+    HAVEN     :  14.3%
+    ICEBOX    :  28.6%
+    LOTUS     :  42.9%
+    PEARL     :  28.6%
+    SPLIT     :  14.3%
+    SUNSET    :   0.0%
+  💾 Saved best model (val_acc: 20.00%)
+
+Epoch 2/30 (43.8s)
+  Train Loss: 2.2191 | Train Acc: 20.29%
+  Val   Loss: 2.1610 | Val   Acc: 35.71%
+  Per-class accuracy:
+    ASCENT    :   0.0%
+    BIND      :   0.0%
+    BREEZE    :  28.6%
+    FRACTURE  :  71.4%
+    HAVEN     :  28.6%
+    ICEBOX    :  85.7%
+    LOTUS     :  42.9%
+    PEARL     :  42.9%
+    SPLIT     :   0.0%
+    SUNSET    :  57.1%
+  💾 Saved best model (val_acc: 35.71%)
+
+Epoch 3/30 (47.2s)
+  Train Loss: 2.1505 | Train Acc: 27.43%
+  Val   Loss: 2.0261 | Val   Acc: 48.57%
+  Per-class accuracy:
+    ASCENT    :   0.0%
+    BIND      :  14.3%
+    BREEZE    :  42.9%
+    FRACTURE  :  57.1%
+    HAVEN     :  57.1%
+    ICEBOX    :  85.7%
+    LOTUS     :  85.7%
+    PEARL     :  57.1%
+    SPLIT     :  14.3%
+    SUNSET    :  71.4%
+  💾 Saved best model (val_acc: 48.57%)
+
+Epoch 4/30 (46.1s)
+  Train Loss: 2.0419 | Train Acc: 40.29%
+  Val   Loss: 1.8540 | Val   Acc: 47.14%
+  Per-class accuracy:
+    ASCENT    :   0.0%
+    BIND      :  14.3%
+    BREEZE    :  42.9%
+    FRACTURE  :  85.7%
+    HAVEN     :  57.1%
+    ICEBOX    :  28.6%
+    LOTUS     :  85.7%
+    PEARL     :  85.7%
+    SPLIT     :   0.0%
+    SUNSET    :  71.4%
+  ⏳ No improvement (1/7)
+
+Epoch 5/30 (43.4s)
+  Train Loss: 1.9052 | Train Acc: 39.43%
+  Val   Loss: 1.5982 | Val   Acc: 58.57%
+  Per-class accuracy:
+    ASCENT    :  28.6%
+    BIND      :  14.3%
+    BREEZE    :  42.9%
+    FRACTURE  :  85.7%
+    HAVEN     :  71.4%
+    ICEBOX    :  71.4%
+    LOTUS     :  85.7%
+    PEARL     :  85.7%
+    SPLIT     :  14.3%
+    SUNSET    :  85.7%
+  💾 Saved best model (val_acc: 58.57%)
+
+Epoch 6/30 (43.4s)
+  Train Loss: 1.7156 | Train Acc: 50.00%
+  Val   Loss: 1.3542 | Val   Acc: 57.14%
+  Per-class accuracy:
+    ASCENT    :  14.3%
+    BIND      :  14.3%
+    BREEZE    :  42.9%
+    FRACTURE  :  85.7%
+    HAVEN     :  71.4%
+    ICEBOX    :  71.4%
+    LOTUS     :  85.7%
+    PEARL     :  85.7%
+    SPLIT     :  14.3%
+    SUNSET    :  85.7%
+  ⏳ No improvement (1/7)
+
+Epoch 7/30 (42.8s)
+  Train Loss: 1.6234 | Train Acc: 52.57%
+  Val   Loss: 1.1310 | Val   Acc: 70.00%
+  Per-class accuracy:
+    ASCENT    :  71.4%
+    BIND      :  42.9%
+    BREEZE    :  42.9%
+    FRACTURE  :  85.7%
+    HAVEN     : 100.0%
+    ICEBOX    :  85.7%
+    LOTUS     :  85.7%
+    PEARL     :  85.7%
+    SPLIT     :  28.6%
+    SUNSET    :  71.4%
+  💾 Saved best model (val_acc: 70.00%)
+
+Epoch 8/30 (43.9s)
+  Train Loss: 1.4811 | Train Acc: 60.00%
+  Val   Loss: 1.0170 | Val   Acc: 68.57%
+  Per-class accuracy:
+    ASCENT    :  57.1%
+    BIND      :  57.1%
+    BREEZE    :  42.9%
+    FRACTURE  :  71.4%
+    HAVEN     :  71.4%
+    ICEBOX    :  85.7%
+    LOTUS     :  85.7%
+    PEARL     :  85.7%
+    SPLIT     :  42.9%
+    SUNSET    :  85.7%
+  ⏳ No improvement (1/7)
+
+Epoch 9/30 (44.1s)
+  Train Loss: 1.3652 | Train Acc: 58.86%
+  Val   Loss: 0.9551 | Val   Acc: 68.57%
+  Per-class accuracy:
+    ASCENT    :  71.4%
+    BIND      :  57.1%
+    BREEZE    :  42.9%
+    FRACTURE  :  57.1%
+    HAVEN     :  85.7%
+    ICEBOX    :  85.7%
+    LOTUS     :  85.7%
+    PEARL     :  85.7%
+    SPLIT     :  42.9%
+    SUNSET    :  71.4%
+  ⏳ No improvement (2/7)
+
+Epoch 10/30 (43.0s)
+  Train Loss: 1.2561 | Train Acc: 60.00%
+  Val   Loss: 0.9069 | Val   Acc: 74.29%
+  Per-class accuracy:
+    ASCENT    :  85.7%
+    BIND      :  57.1%
+    BREEZE    :  42.9%
+    FRACTURE  :  71.4%
+    HAVEN     :  85.7%
+    ICEBOX    :  85.7%
+    LOTUS     :  85.7%
+    PEARL     :  85.7%
+    SPLIT     :  57.1%
+    SUNSET    :  85.7%
+  💾 Saved best model (val_acc: 74.29%)
+
+Epoch 11/30 (42.5s)
+  Train Loss: 1.1056 | Train Acc: 69.71%
+  Val   Loss: 0.8109 | Val   Acc: 75.71%
+  Per-class accuracy:
+    ASCENT    :  71.4%
+    BIND      :  57.1%
+    BREEZE    :  42.9%
+    FRACTURE  :  85.7%
+    HAVEN     :  85.7%
+    ICEBOX    :  85.7%
+    LOTUS     :  85.7%
+    PEARL     :  71.4%
+    SPLIT     :  85.7%
+    SUNSET    :  85.7%
+  💾 Saved best model (val_acc: 75.71%)
+
+Epoch 12/30 (42.6s)
+  Train Loss: 1.0531 | Train Acc: 72.00%
+  Val   Loss: 0.7628 | Val   Acc: 81.43%
+  Per-class accuracy:
+    ASCENT    : 100.0%
+    BIND      :  85.7%
+    BREEZE    :  42.9%
+    FRACTURE  :  57.1%
+    HAVEN     : 100.0%
+    ICEBOX    :  85.7%
+    LOTUS     :  85.7%
+    PEARL     :  71.4%
+    SPLIT     : 100.0%
+    SUNSET    :  85.7%
+  💾 Saved best model (val_acc: 81.43%)
+
+Epoch 13/30 (42.5s)
+  Train Loss: 0.9805 | Train Acc: 70.57%
+  Val   Loss: 0.7258 | Val   Acc: 82.86%
+  Per-class accuracy:
+    ASCENT    : 100.0%
+    BIND      :  85.7%
+    BREEZE    :  57.1%
+    FRACTURE  :  85.7%
+    HAVEN     : 100.0%
+    ICEBOX    :  71.4%
+    LOTUS     :  85.7%
+    PEARL     :  71.4%
+    SPLIT     :  85.7%
+    SUNSET    :  85.7%
+  💾 Saved best model (val_acc: 82.86%)
+
+Epoch 14/30 (42.7s)
+  Train Loss: 0.8985 | Train Acc: 75.43%
+  Val   Loss: 0.7083 | Val   Acc: 80.00%
+  Per-class accuracy:
+    ASCENT    : 100.0%
+    BIND      :  85.7%
+    BREEZE    :  57.1%
+    FRACTURE  :  57.1%
+    HAVEN     : 100.0%
+    ICEBOX    :  85.7%
+    LOTUS     :  85.7%
+    PEARL     :  71.4%
+    SPLIT     :  71.4%
+    SUNSET    :  85.7%
+  ⏳ No improvement (1/7)
+
+Epoch 15/30 (42.8s)
+  Train Loss: 0.9434 | Train Acc: 74.00%
+  Val   Loss: 0.6940 | Val   Acc: 82.86%
+  Per-class accuracy:
+    ASCENT    : 100.0%
+    BIND      :  85.7%
+    BREEZE    :  57.1%
+    FRACTURE  :  57.1%
+    HAVEN     : 100.0%
+    ICEBOX    :  85.7%
+    LOTUS     :  85.7%
+    PEARL     :  85.7%
+    SPLIT     :  85.7%
+    SUNSET    :  85.7%
+  ⏳ No improvement (2/7)
+
+Epoch 16/30 (43.0s)
+  Train Loss: 0.8439 | Train Acc: 74.57%
+  Val   Loss: 0.6634 | Val   Acc: 82.86%
+  Per-class accuracy:
+    ASCENT    : 100.0%
+    BIND      :  85.7%
+    BREEZE    :  57.1%
+    FRACTURE  :  57.1%
+    HAVEN     : 100.0%
+    ICEBOX    :  85.7%
+    LOTUS     :  85.7%
+    PEARL     :  85.7%
+    SPLIT     :  85.7%
+    SUNSET    :  85.7%
+  ⏳ No improvement (3/7)
+
+Epoch 17/30 (44.2s)
+  Train Loss: 0.7533 | Train Acc: 77.14%
+  Val   Loss: 0.6675 | Val   Acc: 80.00%
+  Per-class accuracy:
+    ASCENT    :  85.7%
+    BIND      :  71.4%
+    BREEZE    :  57.1%
+    FRACTURE  :  57.1%
+    HAVEN     : 100.0%
+    ICEBOX    :  85.7%
+    LOTUS     :  85.7%
+    PEARL     :  85.7%
+    SPLIT     :  85.7%
+    SUNSET    :  85.7%
+  ⏳ No improvement (4/7)
+
+Epoch 18/30 (43.1s)
+  Train Loss: 0.7277 | Train Acc: 78.00%
+  Val   Loss: 0.6616 | Val   Acc: 78.57%
+  Per-class accuracy:
+    ASCENT    : 100.0%
+    BIND      :  85.7%
+    BREEZE    :  57.1%
+    FRACTURE  :  57.1%
+    HAVEN     : 100.0%
+    ICEBOX    :  85.7%
+    LOTUS     :  85.7%
+    PEARL     :  71.4%
+    SPLIT     :  85.7%
+    SUNSET    :  57.1%
+  ⏳ No improvement (5/7)
+
+Epoch 19/30 (43.2s)
+  Train Loss: 0.6969 | Train Acc: 80.57%
+  Val   Loss: 0.6388 | Val   Acc: 82.86%
+  Per-class accuracy:
+    ASCENT    : 100.0%
+    BIND      :  85.7%
+    BREEZE    :  57.1%
+    FRACTURE  :  71.4%
+    HAVEN     : 100.0%
+    ICEBOX    :  85.7%
+    LOTUS     :  85.7%
+    PEARL     :  71.4%
+    SPLIT     :  85.7%
+    SUNSET    :  85.7%
+  ⏳ No improvement (6/7)
+
+Epoch 20/30 (43.0s)
+  Train Loss: 0.7630 | Train Acc: 78.57%
+  Val   Loss: 0.6212 | Val   Acc: 81.43%
+  Per-class accuracy:
+    ASCENT    : 100.0%
+    BIND      :  71.4%
+    BREEZE    :  57.1%
+    FRACTURE  :  71.4%
+    HAVEN     : 100.0%
+    ICEBOX    :  85.7%
+    LOTUS     :  85.7%
+    PEARL     :  71.4%
+    SPLIT     :  85.7%
+    SUNSET    :  85.7%
+  ⏳ No improvement (7/7)
+
+🛑 Early stopping at epoch 20
+
+🎉 Training complete! Best val acc: 82.86%
+📁 Best model saved to: C:\Users\midor\OneDrive\Desktop\valorant-map-classifier\models\best_model.pth

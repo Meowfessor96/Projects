@@ -1,0 +1,8 @@
+{"time":"2026-07-18T00:16:08.2211005+05:30","level":"INFO","msg":"main: starting server","port-filename":"C:\\Users\\midor\\AppData\\Local\\Temp\\tmp2q6tkbsc\\port-27600.txt","pid":27600,"detached":false,"idle-timeout":600000000000,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2026-07-18T00:16:08.2250997+05:30","level":"INFO","msg":"server: will exit if parent process dies","ppid":27600}
+{"time":"2026-07-18T00:16:08.2250997+05:30","level":"INFO","msg":"server: accepting connections","addr":{"IP":"127.0.0.1","Port":50731,"Zone":""}}
+{"time":"2026-07-18T00:16:08.2250997+05:30","level":"INFO","msg":"server: accepting connections","addr":{"Name":"C:\\Users\\midor\\AppData\\Local\\Temp\\wandb-27600-9112-4142098072\\socket","Net":"unix"}}
+{"time":"2026-07-18T00:16:10.3372235+05:30","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"1(127.0.0.1:50733)"}
+{"time":"2026-07-18T00:16:11.0759539+05:30","level":"INFO","msg":"handleInformInit: received","streamId":"fqumlndy","id":"1(127.0.0.1:50733)"}
+{"time":"2026-07-18T00:16:12.9188185+05:30","level":"INFO","msg":"handleInformInit: stream started","streamId":"fqumlndy","id":"1(127.0.0.1:50733)"}
+{"time":"2026-07-18T00:16:19.1692054+05:30","level":"INFO","msg":"connection: cancelling request","id":"1(127.0.0.1:50733)","requestId":"w1ytsbyomils"}
