@@ -1,66 +1,43 @@
 # Valorant Map Classifier
 
-A deep learning model that classifies Valorant map screenshots using computer vision with EfficientNet-B0 and transfer learning.
+Classify Valorant map screenshots using EfficientNet-B0 and transfer learning.
 
 ## Setup
 
-1. Install Tesseract OCR (for text blurring during preprocessing):
+1. Install Tesseract OCR (needed for text blurring during preprocessing):
 
    - Windows: https://github.com/UB-Mannheim/tesseract/wiki
    - Mac: `brew install tesseract`
    - Linux: `sudo apt install tesseract-ocr`
 
-2. Clone the repo and install dependencies:
+2. Install Python dependencies:
 
-   ```bash
-   git clone https://github.com/<your-username>/valorant-map-classifier.git
-   cd valorant-map-classifier
-   pip install -r requirements.txt
-   ```
-
-3. Add your raw screenshots to `data/raw/` (images should follow the naming pattern `valorant_{MAP} ...`)
-
-4. Prepare the dataset:
-
-   ```bash
-   python -m src.prepare_data
-   ```
-
-## Project Structure
-
-```
-valorant-map-classifier/
-├── src/
-│   ├── config.py          # Centralized config (paths, hyperparameters, maps)
-│   ├── prepare_data.py    # Parse filenames, blur text, stratified split
-│   ├── dataset.py         # PyTorch Dataset + Albumentations transforms
-│   ├── model.py           # EfficientNet-B0 / ResNet50 builder
-│   ├── train.py           # Training loop with W&B logging
-│   ├── fine_tune.py       # Fine-tune on feedback data
-│   ├── inference.py       # Predict on new images
-│   ├── test.py            # Evaluate on held-out test set
-│   ├── benchmark.py       # Measure latency + model size
-│   ├── compare_models.py  # Compare original vs fine-tuned
-│   └── collect_feedback.py # Interactive hard-example collector
-├── data/
-│   ├── raw/               # Put your original screenshots here
-│   ├── processed/         # Blurred copies
-│   └── splits/            # Auto-generated train/val/test folders
-├── models/                # Saved .pth checkpoints
-├── requirements.txt
-├── .gitignore
-└── README.md
+```bash
+pip install -r requirements.txt
 ```
 
-## Usage
+## Quick Start
 
 ### 1. Prepare data
+
+Place your raw screenshots in `data/raw/`. Images should follow the naming pattern:
+
+```
+valorant_ASCENT Valorant_0.jpg
+valorant_BIND Valorant_44.jpg
+...
+```
+
+Then run:
 
 ```bash
 python -m src.prepare_data
 ```
 
-Creates `data/splits/{train,val,test}/` with stratified splits.
+This will:
+- Parse filenames to extract map labels
+- Optionally blur text overlays using Tesseract OCR
+- Split data into `data/splits/{train,val,test}/` stratified by map
 
 ### 2. Train
 
@@ -69,19 +46,19 @@ python -m src.train
 ```
 
 - Uses EfficientNet-B0 with ImageNet pretrained weights
-- Cosine annealing LR schedule + AdamW
+- AdamW optimizer + CosineAnnealingLR
 - Early stopping (patience=7) on validation accuracy
-- Logs to W&B (set `USE_WANDB = True` in `src/config.py`)
+- Logs to Weights & Biases (set `USE_WANDB = False` in `src/config.py` to disable)
 
-### 3. Evaluate
+Best model saves to `models/best_model.pth`.
+
+### 3. Evaluate on test set
 
 ```bash
 python -m src.test
 ```
 
-Prints overall + per-map accuracy on the test set.
-
-### 4. Inference
+### 4. Run inference
 
 ```bash
 python -m src.inference "data/splits/test/ASCENT/valorant_ASCENT Valorant_0.jpg"
@@ -90,37 +67,45 @@ python -m src.inference "data/splits/test/ASCENT/valorant_ASCENT Valorant_0.jpg"
 Optional flags:
 - `--model path/to/model.pth` — use a custom checkpoint
 - `--top-k 5` — show top-5 predictions
-- `--cpu` — force CPU inference
+- `--cpu` — force CPU
 
-### 5. Fine-tune on feedback
+Note: Wrap the image path in quotes if it contains spaces.
 
-Collect hard examples:
+### 5. Collect feedback on hard examples
 
 ```bash
 python -m src.collect_feedback
 ```
 
-Then fine-tune:
+An interactive prompt will show the model's top-3 predictions. Press Enter if correct, or type the right map name to save it as feedback.
+
+### 6. Fine-tune on feedback
 
 ```bash
 python -m src.fine_tune
 ```
 
-### 6. Compare models
+Trains for 10 epochs on the collected feedback images and saves to `models/fine_tuned_model.pth`.
+
+### 7. Compare models
 
 ```bash
 python -m src.compare_models
 ```
 
-Compares original `best_model.pth` vs `fine_tuned_model.pth` on the test set.
+Compares `best_model.pth` vs `fine_tuned_model.pth` on the test set.
 
-### 7. Benchmark
+### 8. Benchmark
 
 ```bash
 python -m src.benchmark
 ```
 
-Shows model size, avg latency (ms), and throughput (FPS).
+Shows model size, average latency (ms), and throughput (FPS).
+
+## Supported Maps
+
+ASCENT, BIND, BREEZE, FRACTURE, HAVEN, ICEBOX, LOTUS, PEARL, SPLIT, SUNSET
 
 ## Configuration
 
@@ -133,17 +118,12 @@ Edit `src/config.py` to change:
 | `IMAGE_SIZE` | 224 | Input resolution |
 | `BATCH_SIZE` | 8 | Training batch size |
 | `NUM_EPOCHS` | 30 | Max training epochs |
-| `LEARNING_RATE` | 1e-4 | Initial LR |
-| `TESSERACT_CMD` | env var | Override Tesseract executable path |
-
-## W&B Logging
-
-Training logs to Weights & Biases automatically. View runs at:
-
-[Valorant Map Classifier — W&B](https://wandb.ai/thequietkid106-iit-hyderabad/valorant-map-classifier/runs/e368p570?nw=nwuserthequietkid106)
+| `LEARNING_RATE` | 1e-4 | Initial learning rate |
+| `WEIGHT_DECAY` | 1e-4 | AdamW weight decay |
+| `EARLY_STOP_PATIENCE` | 7 | Epochs to wait before stopping |
 
 ## Notes
 
 - `models/`, `data/raw/`, `data/processed/`, `wandb/` are gitignored — add your own data locally
-- For Windows, Tesseract defaults to `C:\Program Files\Tesseract-OCR\tesseract.exe` (override via `TESSERACT_CMD` env var)
-- Fine-tuned models save to `models/fine_tuned_model.pth`
+- On Windows, Tesseract defaults to `C:\Program Files\Tesseract-OCR\tesseract.exe`
+- Feedback images are stored in `data/feedback/{MAP_NAME}/feedback_{N}.jpg`
