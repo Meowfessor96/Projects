@@ -1,6 +1,6 @@
 # Valorant Map Classifier
 
-Classify Valorant map screenshots using EfficientNet-B0 and transfer learning.
+Classify Valorant images using EfficientNet-B0 and transfer learning
 
 ## Setup
 
@@ -121,6 +121,9 @@ Edit `src/config.py` to change:
 | `LEARNING_RATE` | 1e-4 | Initial learning rate |
 | `WEIGHT_DECAY` | 1e-4 | AdamW weight decay |
 | `EARLY_STOP_PATIENCE` | 7 | Epochs to wait before stopping |
+
+## Results  
+<img width="1330" height="817" alt="Image" src="https://github.com/user-attachments/assets/74fb995b-9851-40ab-bcfd-1c43ec330478" />
 
 ## Notes
 
