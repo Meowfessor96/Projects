@@ -2,3 +2,4 @@ valorant-map-classifier/venv
 *.env
 *venv
 *.venv
+.kilo/

@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+*.egg-info/
+dist/
+build/
+
+# PyTorch / Models
+*.pth
+*.pkl
+*.ckpt
+models/
+
+# Data
+data/raw/
+data/processed/
+data/splits/
+data/feedback/
+
+# Weights & Biases
+wandb/
+*.wandb
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+Desktop.ini
+
+# Kilo
+.kilo/
