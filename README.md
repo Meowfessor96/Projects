@@ -8,9 +8,9 @@ This repository showcases a collection of my personal projects, categorized into
 An AI-powered Chrome extension that accelerates developer onboarding by injecting an interactive, context-aware
 sidebar directly into GitHub repository pages
 
-### [Valorant image processing](./valorant-map-classifier/)
+### [Valorant Object Classifier](./valorant-classifier/)
 
-Developed an image classification model to identify Valorant maps, achieving 83%+ accuracy despite training on a relatively small dataset.
+Developed an image classification model to identify Valorant entities, achieving 97%+ accuracy on labels on test and validation datasets.
 
 ### [Binary Classification using Logistic Regression](./Binary-Classification-Using-Logistic-Regression)
 

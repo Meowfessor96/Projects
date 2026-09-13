@@ -1,5 +1,15 @@
 # 🎯 Valorant Real-Time Object Detection using YOLOv8
 
+
+
+#### Pre-requisites :
+
+install dependencies
+
+```Python
+pip install -r requirements.txt
+```
+
 ## 📌 Overview
 
 This project implements a high-performance, real-time object detection system tailored for Valorant gameplay footage. Using the **YOLOv8s** architecture, the model accurately detects in-game entities such as **enemies, teammates, dropped spikes, and planted spikes**. The system is optimized for low-latency inference, making it highly suitable for real-time gameplay analysis and AI-assisted applications.
