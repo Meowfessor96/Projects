@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp"],
+      "env": {
+        "PLAYWRIGHT_BROWSER_TYPE": "chromium",
+        "PLAYWRIGHT_HEADLESS": "false",
+        "PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH": "C:\\Users\\midor\\AppData\\Local\\Programs\\Opera\\opera.exe"
+      }
+    }
+  }
+}
