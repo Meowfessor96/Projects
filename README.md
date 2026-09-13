@@ -4,6 +4,12 @@ This repository showcases a collection of my personal projects, categorized into
 
 ## Projects :
 
+### [CS2 Match Predictor](./cs-predictor/)
+
+End-to-end CS:GO/CS2 match prediction engine trained on 1,990 real HLTV
+professional matches, combining a logistic regression blend model with
+per-team economy-state Markov chains and Monte Carlo tournament simulations.
+
 ### [GitHub repo assistance](./git-repo-assistance/)
 
 An AI-powered Chrome extension that accelerates developer onboarding by injecting an interactive, context-aware
