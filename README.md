@@ -5,12 +5,13 @@ This repository showcases a collection of my personal projects, categorized into
 ## Projects :
 
 ### [GitHub repo assistance](./git-repo-assistance/)
+
 An AI-powered Chrome extension that accelerates developer onboarding by injecting an interactive, context-aware
 sidebar directly into GitHub repository pages
 
 ### [Valorant Object Classifier](./valorant-classifier/)
 
-Developed an image classification model to identify Valorant entities, achieving 97%+ accuracy on labels on test and validation datasets.
+Developed an image classification model to identify Valorant entities, achieving 99%+ accuracy on labels on test and validation datasets.
 
 ### [Binary Classification using Logistic Regression](./Binary-Classification-Using-Logistic-Regression)
 
@@ -19,9 +20,6 @@ Implemented a binary classifier from scratch using Logistic Regression with mode
 ### [KNN Image Classifier](./KNN-Classifier/)
 
 Implemented a K-Nearest Neighbors classifier for numerical image recognition and achieved successful predictions on benchmark datasets.
-
-
-
 
 ---
 
