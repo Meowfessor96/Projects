@@ -1,62 +1,59 @@
 # Project Portfolio
 
-This repository showcases a collection of my personal projects, categorized into general development and electrical engineering domains. Use the links below to navigate to each project folder.
+A collection of coursework and personal projects in predictive modelling, machine learning, software development, and electrical engineering. Each link opens the project's code, documentation, or hardware demonstrations.
 
-## Projects :
+## Predictive Modelling, Machine Learning, and Software
 
-### [CS2 Match Predictor](./cs-predictor/)
+### [Predicting Footballer Market Values](./football-market-value-prediction/)
 
-End-to-end CS:GO/CS2 match prediction engine trained on 1,990 real HLTV
-professional matches, combining a logistic regression blend model with
-per-team economy-state Markov chains and Monte Carlo tournament simulations.
+FIFA 23 market-value modelling in R / RStudio using PCA, K-means clustering, and pooled versus role-specific regression. Reduced 29 skill variables to four components retaining 78.1% of variance and evaluated regression models using a 13,396-player hold-out set. Includes the project presentation and a README documenting the methods, reported results, and a discrepancy between the final-score table and plot annotation.
 
-### [GitHub repo assistance](./git-repo-assistance/)
+### [Counter-Strike Match Outcome Predictor](./cs-predictor/)
 
-An AI-powered Chrome extension that accelerates developer onboarding by injecting an interactive, context-aware
-sidebar directly into GitHub repository pages
+A Python notebook for predicting professional CS:GO match outcomes using logistic regression, time-decayed team features, economy-state Markov models, dynamic programming, and Monte Carlo simulation. The recorded evaluation reaches 61.9% accuracy on 299 held-out matches against a 57.5% rank-only baseline. The current data uses CS:GO MR15 rules; adapting the configuration for CS2 does not constitute validation on modern CS2 matches.
 
-### [Valorant Object Classifier](./valorant-classifier/)
+### [GitHub Repo Intelligence](./git-repo-assistance/)
 
-Developed an image classification model to identify Valorant entities, achieving 99%+ accuracy on labels on test and validation datasets.
+A Chrome extension with a JavaScript sidebar and local Flask backend. Combines GitHub REST API metadata with Groq-hosted Llama 3.3 to generate structured repository summaries, inferred technology and architecture information, suggested entry points, and related-repository recommendations.
 
-### [Binary Classification using Logistic Regression](./Binary-Classification-Using-Logistic-Regression)
+### [Valorant Object Detection](./valorant-classifier/)
 
-Implemented a binary classifier from scratch using Logistic Regression with model training and evaluation.
+A YOLOv8s object detector for enemies, teammates, dropped spikes, and planted spikes in Valorant gameplay frames. The saved notebook evaluation reports 0.995 mAP@50 and 0.767 mAP@50-95 on 988 test images, with 11.4 ms inference per image on an RTX 3050 laptop GPU.
+
+### [Binary Classification and Statistical Learning](./Binary-Classification-Using-Logistic-Regression/)
+
+Python / NumPy implementations of least-squares classification, linear and Fisher discriminant projections, perceptron, logistic regression, Gaussian decision boundaries, and Gaussian mixture estimation with expectation-maximization. Includes synthetic-data experiments and decision-boundary visualizations.
 
 ### [KNN Image Classifier](./KNN-Classifier/)
 
-Implemented a K-Nearest Neighbors classifier for numerical image recognition and achieved successful predictions on benchmark datasets.
+A nearest-neighbour classification notebook with a custom NumPy implementation for synthetic data, repeated hold-out selection of k, and a scikit-learn MNIST experiment comparing neighbour counts and distance metrics. Includes decision-region and confusion-matrix plotting code; saved outputs should be checked before claiming a completed MNIST test score.
 
----
+## Electrical Engineering
 
-## 🔌 [Electrical Projects](./Electrical_Core_Projects/)
+### [5-bit SAR ADC with R-2R DAC](./Electrical_Core_Projects/ADC/)
 
-### 🔧 [5-bit SAR ADC with DAC](./Electrical_Core_Projects/ADC/)
+Hardware successive-approximation ADC using D flip-flop control logic, an R-2R ladder DAC, and an LM358 comparator circuit. Arduino supplies clock and enable signals. Includes the lab report and a hardware demonstration.
 
-Analog-to-digital converter with successive approximation, featuring 5-bit precision and DAC integration.
+### [FM Transmitter](./Electrical_Core_Projects/FM-transmitter/)
 
-### 📡 [FM Transmitter](./Electrical_Core_Projects/FM-Transmitter/)
+A 9 V BC547 transistor-based FM transmitter with microphone input, an LC resonant circuit, and a wire antenna. Includes a handwritten circuit report and a theoretical carrier-frequency calculation.
 
-Built a basic FM transmitter using ICs for broadcasting audio on a fixed frequency.
+### [Audio Amplifier](./Electrical_Core_Projects/Audio-amplifier/)
 
-### 🔊 [Audio Amplifier](./Electrical_Core_Projects/Audio-amplifier/)
+An LM386 microphone-to-speaker amplifier with volume control, capacitive coupling, bypassing, and gain configuration. Includes circuit documentation and frequency-response / noise analysis.
 
-Amplifier circuit with potentiometer-based gain control.
+### [Seven-Segment Digital Clock](./Electrical_Core_Projects/7-segment-digital-clock/)
 
-### ⏱ [7-Segment Digital Clock](./Electrical_Core_Projects/7-segment-digital-clock/)
+A breadboard digital clock using logic ICs and seven-segment displays. Hardware videos demonstrate the hours/minutes and seconds displays.
 
-HH:MM:SS format clock using flip-flops, decoders, and Arduino.
+### [Adaptive Digital Noise Filter](./Electrical_Core_Projects/Digital-noise-filter/)
 
-### 🔋 [Mobile DC Charger](./Electrical_Core_Projects/Mobile-DC-charger/)
+MATLAB implementation of NLMS adaptive FIR noise cancellation with an optional IIR notch-filter cascade in the reference-noise path. Supports full suppression and partial suppression modes, SNR evaluation, and enhanced-audio export.
 
-Circuit for converting AC to DC and charging mobile devices.
+### [Solar Wireless Mobile Charger](./Electrical_Core_Projects/Wireless-solar-mobile-charger/)
 
-### 🧹 [Digital Noise Filter](./Electrical_Core_Projects/Digital-Noise-Filter/)
+A solar-powered inductive charging prototype with battery backup, a MOSFET transmitter, bridge rectification, filtering, and voltage regulation. Includes schematics, component notes, hardware observations, and measured output voltage versus coil separation.
 
-Signal noise reduction using the Normalized LMS algorithm.
+## Navigation and Scope
 
-### ☀️ [Wireless Solar Mobile Charger](./Electrical_Core_Projects/Wireless-solar-mobile-charger/)
-
-Solar-powered wireless mobile charging prototype with magnetic induction.
-
----
+The list above contains the 12 project folders currently present in this repository. Reports and saved notebook outputs describe the work performed; some folders do not include the original datasets, source code, or full reproduction environment.
