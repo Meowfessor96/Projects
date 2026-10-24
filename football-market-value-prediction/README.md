@@ -1,78 +1,106 @@
 # Predicting Footballer Market Values
 
-A predictive modelling case study using FIFA 23 player attributes to investigate how skills, age, playing role, and potential relate to player market value. The project combines dimensionality reduction, player clustering, and regression, comparing pooled models with separate models for different playing roles.
+A predictive modelling case study using FIFA 23 player attributes to investigate how skills, age, playing role, and potential relate to player market value. The R analysis combines dimensionality reduction, player clustering, regression comparison, and residual diagnostics.
 
-**Tools:** R, RStudio
+**Tools:** R, RStudio, psych, MASS, cluster; optional NbClust and olsrr.
 
-**Methods:** Principal Component Analysis (PCA), parallel analysis, varimax rotation, K-means clustering, linear regression, role-specific modelling, and residual analysis.
+**Methods:** PCA, factor analysis, parallel analysis, varimax rotation, K-means, hierarchical clustering, linear regression, backward AIC selection, and influence diagnostics.
 
-[Read the project presentation](./Predictive_modelling_Final.pdf)
-
-## Questions
-
-- Can 29 correlated skill ratings be summarized into a smaller set of interpretable dimensions?
-- Do those dimensions reveal groups of players with similar skill profiles?
-- Do role-specific regression models predict market value better than a pooled model?
-- Which players have large differences between their recorded and predicted values?
+[Read the presentation](./Predictive_modelling_Final.pdf) | [View the analysis](./main.R)
 
 ## Data and preprocessing
 
-The presentation describes a source dataset with 161,583 player records and 110 variables, then focuses the analysis on FIFA 23 outfield players with positive market value. That source count is not the number used to fit the models.
+The presentation describes a source dataset with 161,583 records and 110 variables. The script filters this multi-edition dataset to FIFA 23, excludes goalkeepers and players with missing or non-positive market value, and uses 29 detailed skill ratings rather than the six aggregate skill categories.
 
-- Excluded goalkeepers and players with zero market value.
-- Log-transformed market value to address its strongly right-skewed distribution.
-- Used 3,000 players for modelling and 13,396 players for hold-out validation.
-- Grouped playing positions into four functional roles: defenders (DEF), defensive midfielders (DM), midfielders (MID), and forwards (FWD).
-- Examined 29 skill-related variables alongside age, position, and player potential.
+- Log-transformed market value to address its right-skewed distribution.
+- Constructed age-squared and four functional roles: DEF, DM, MID, and FWD.
+- Sampled 3,000 players for analysis using a fixed random seed.
+- Reserved the remaining 13,396 players for hold-out evaluation in the reported run.
+- Estimated skill-centering and scaling parameters from the analysis sample and reused them for hold-out regression data.
 
-## Workflow
+The dataset is not included. The original input is the Kaggle FIFA 15-23 file described in the script as `male_players (legacy).csv`, renamed locally to `male_players_legacy.csv`.
 
-### 1. Dimensionality reduction
+## Analysis workflow
 
-Used parallel analysis to select four principal components from the 29 skill variables. The retained components explain **78.1% of variance**. Varimax rotation supported interpretation of the dimensions as technical ability, defending, pace, and physical ability.
+### Dimensionality reduction
 
-### 2. Player clustering
+Compared unrotated PCA, varimax-rotated PCA, and principal-axis factor analysis using `psych`. Parallel analysis supported four principal components. The presentation reports that those components retain **78.1% of skill variance**, interpreted as technical ability, defending, pace, and physical ability. Factor congruence compares the PCA and factor-analysis solutions.
 
-Applied K-means to the reduced skill representation. Assessed the number of clusters using within-cluster sum of squares, silhouette scores, and NbClust voting. The four interpreted groups were technical midfielders, attackers, athletic full-backs / box-to-box players, and centre-backs.
+### Player clustering
 
-The presentation reports **69% cluster purity against playing position**, compared with a **37% baseline**. Positions were not inputs to the clustering stage; this comparison was used to interpret the resulting groups.
+Standardized the component scores and assessed K-means cluster counts using within-cluster sum of squares, silhouette widths, and optional NbClust voting. Four clusters were chosen for football interpretation, including a distinction between centre-backs and athletic full-backs; this was not simply the automatic winner of every selection criterion.
 
-### 3. Regression comparison
+The presentation reports **69% purity against playing role**, compared with a **37% majority-role baseline**. Positions are not used as clustering inputs. The script also compares hierarchical linkage on a 60-player subsample and uses an LDA projection to visualize the K-means assignments. Its comments note that this projection emphasizes separation and does not establish naturally distinct player populations.
 
-Compared seven model specifications, including an overall-rating baseline, pooled skill models, a PCA-based model, stepwise selection, and role-specific models with and without player potential.
+### Regression comparison
+
+Compared seven model specifications using `lm()` and `MASS::stepAIC()`:
 
 | Model | Description |
 | --- | --- |
 | M1 | Overall-rating baseline |
-| M2 | Pooled model using age, position, and 29 skills |
-| M3 | Pooled model using four PCA dimensions |
-| M4 | Stepwise version of the pooled model |
+| M2 | Pooled age, age-squared, position, and 29 skills |
+| M3 | Pooled age, age-squared, position, and four PCA dimensions |
+| M4 | Backward AIC selection from M2 |
 | M5 | M4 with player potential |
-| M6 | Separate models by role using age and skills |
+| M6 | Separate age, age-squared, and skill models for each role |
 | M7 | Role-specific models with player potential |
 
-The performance summary on slide 11 reports the following hold-out scores:
+The script calculates train R-squared, hold-out R-squared, and hold-out RMSE on **natural-log market value**. These R-squared scores are not raw-euro prediction accuracy percentages.
 
-| Model | Reported hold-out R-squared |
+| Model | Hold-out R-squared reported in the presentation |
 | --- | ---: |
 | M1: overall-rating baseline | 0.817 |
 | M6: role-specific model without potential | 0.942 |
 | M7: role-specific model with potential | 0.965 |
 
-**Report discrepancy:** slide 12's predicted-versus-actual plot is annotated with hold-out R-squared = 0.94, while slide 11 and the conclusion report 0.965 for M7. The supplied presentation does not establish whether that plot shows M6 or a different evaluation. These values are reproduced as reported, rather than independently verified or reconciled. The exact evaluation scale should also be checked against the original analysis before reusing the final score.
+**Plot clarification:** the presentation's prediction scatterplot is annotated 0.94 because `A_08_actual_vs_predicted` in `main.R` plots M6, using `model_compare$test_R2[6]`. The final score 0.965 refers to M7. The code resolves the apparent mismatch between the model-comparison slide and scatterplot, but the numerical results have not been independently rerun here because the dataset was not supplied.
 
-### 4. Residual analysis
+### Residual and influence analysis
 
-Compared recorded and predicted values to identify players priced above or below model estimates. These residuals support further investigation; they do not by themselves establish that branding, a transfer, or another specific factor caused the difference.
+Examined marginal skill correlations versus conditional regression coefficients, variance inflation factors, standardized and studentized residuals, Q-Q plots, Shapiro-Wilk testing, Cook's distance, leverage, and DFFITS. Used M6's fitted residuals to rank players valued above or below the skill-and-age model's estimates, and examined relationships with omitted attributes such as potential.
 
-## Repository contents
+These residuals describe model discrepancies; they do not prove that branding, transfers, or other specific causes explain a player's valuation. Exponentiating a fitted log value also does not automatically provide an unbiased conditional mean in euros.
+
+## Run locally
+
+1. Install R. RStudio is optional but provides plot previews.
+2. Install the required packages once:
+
+```r
+install.packages(c("psych", "MASS", "cluster"))
+```
+
+3. Optionally install the additional cluster-selection and diagnostic packages:
+
+```r
+install.packages(c("NbClust", "olsrr"))
+```
+
+4. Put the dataset in this folder as `male_players_legacy.csv`. If it is absent, the script offers a file-selection dialog.
+5. Set the working directory to this folder and run in a fresh R session:
+
+```r
+source("main.R", echo = TRUE)
+```
+
+Or, when the CSV is already in this folder:
+
+```sh
+Rscript main.R
+```
+
+Figures are exported to `fifa_plots/`, with `A_` names for presentation figures and `B_` names for supporting diagnostics. Tables and summary metrics print to the console. The script can disable on-screen previews if the RStudio plot pane is too small while continuing PNG export.
+
+The committed script uses the resolved `csv_path` in `read.csv()`, so the fallback chooser is used only when needed. The statistical workflow is otherwise preserved from the supplied coursework script. Exact package versions and the source dataset are not included.
+
+## Files
 
 | File | Purpose |
 | --- | --- |
-| [Predictive_modelling_Final.pdf](./Predictive_modelling_Final.pdf) | Original 15-slide project presentation |
-| [README.md](./README.md) | Project overview, methods, reported results, and limitations |
-
-This folder currently contains the presentation and documentation. The R scripts, dataset, fitted models, package versions, and train/validation split details have not been supplied, so the analysis cannot yet be reproduced from this folder alone.
+| [main.R](./main.R) | Full analysis and figure-generation script |
+| [Predictive_modelling_Final.pdf](./Predictive_modelling_Final.pdf) | Original 15-slide presentation |
+| [README.md](./README.md) | Methods, reported results, setup, and interpretation |
 
 ## Team
 

@@ -6,7 +6,7 @@ A collection of coursework and personal projects in predictive modelling, machin
 
 ### [Predicting Footballer Market Values](./football-market-value-prediction/)
 
-FIFA 23 market-value modelling in R / RStudio using PCA, K-means clustering, and pooled versus role-specific regression. Reduced 29 skill variables to four components retaining 78.1% of variance and evaluated regression models using a 13,396-player hold-out set. Includes the project presentation and a README documenting the methods, reported results, and a discrepancy between the final-score table and plot annotation.
+FIFA 23 market-value modelling in R / RStudio using PCA, K-means clustering, and pooled versus role-specific regression. Reduced 29 skill variables to four components retaining 78.1% of variance and evaluated regression models using a 13,396-player hold-out set. Includes the R analysis script, the project presentation, and setup documentation. The code distinguishes the role-specific model without potential (reported hold-out R-squared 0.942) from the model with potential (0.965), evaluated on log market value.
 
 ### [Counter-Strike Match Outcome Predictor](./cs-predictor/)
 
